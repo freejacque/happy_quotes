@@ -1,0 +1,50 @@
+body {
+  background-color: white;
+  font-size: 16px;
+}
+div.container {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+div.main-text {
+  display: inline-block;
+  width: 100%;
+}
+h1 {
+  border-bottom: black 1px solid;
+  color: gray;
+  font-size: 3em;
+  padding-bottom: .5em;
+  text-align: left;
+}
+span {
+  color:black;
+}
+p#quote {
+  color: black;
+  font-size: 1.5em;
+}
+p#author {
+  color: gray;
+  font-size: 1em;
+  text-align: right;
+}
+p {
+  min-height: 2em;
+}
+button {
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  height: 2.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 20%;
+}
+p#quote.blue-text {
+  color: blue;
+}
