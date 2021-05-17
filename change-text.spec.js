@@ -9,7 +9,7 @@ test('Check that changeText changes the text displayed on the page', () => {
       </div>
     </div>
   `;
-  require('./change-text.js');
+  require('./public/change-text.js');
 
   const quote = document.getElementById('quote');
   const author = document.getElementById('author');

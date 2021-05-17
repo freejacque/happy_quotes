@@ -34,6 +34,3 @@ var changeText = function() {
 };
 
 document.querySelector('button').addEventListener('click', changeText);
-
-
-module.exports = changeText;
