@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Good Vibes</title>
+  <style type="text/css">
+    body {
+      background-color: white;
+      font-size: 16px;
+    }
+    div.container {
+      margin: auto;
+      text-align: center;
+      width: 80%;
+    }
+    div.main-text {
+      display: inline-block;
+      width: 100%;
+    }
+    h1 {
+      border-bottom: black 1px solid;
+      color: gray;
+      font-size: 3em;
+      padding-bottom: .5em;
+      text-align: left;
+    }
+    span {
+      color:black;
+    }
+    p#quote {
+      color: black;
+      font-size: 1.5em;
+    }
+    p#author {
+      color: gray;
+      font-size: 1em;
+      text-align: right;
+    }
+    p {
+      min-height: 2em;
+    }
+    button {
+      background-color: gray;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px black;
+      color: white;
+      font-size: 1em;
+      font-weight: 600;
+      height: 2.5em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 20%;
+    }
+    p#quote.blue-text {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span>H</span>appy <span>Q</span>uotes</h1>
+    <div class="main-text">
+      <p id="quote">Press the button for a positive quote</p>
+      <p id="author"></p>
+      <button id="textButton">Click</button>
+    </div>
+  </div>
+</body>
+<footer>
+  <script type="text/javascript">
+      var count = 0;
+      var originalText = 'Press the button for a positive quote.';
+      var quotes = [
+        {
+          quote: '\"Happiness is the only thing that multiplies when you share it.\"',
+          author: '- Albert Schweitzer'
+        },
+        {
+          quote: '\"Keep your face to the sunshine and you cannot see a shadow.\"',
+          author: '- Helen Keller'
+        },
+        {
+          quote: '\"The happiness of your life depends upon the quality of your thoughts.\"',
+          author: '- Marcus Aurelius'
+        }
+      ];
+
+      var changeText = function() {
+        let pTag = document.getElementById('quote');
+        let author = document.getElementById('author');
+        let currentText = pTag.textContent;
+        let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+        if (currentText === originalText || count == 0 ) {
+          pTag.textContent = randomQuote['quote'];
+          author.textContent = randomQuote['author'];
+          pTag.classList.add('blue-text');
+          count++;
+        } else {
+          pTag.textContent = originalText;
+          author.textContent = '';
+          pTag.classList.remove('blue-text');
+        };
+      };
+
+      document.querySelector('button').addEventListener('click', changeText);
+  </script>
+</footer>
+</html>
