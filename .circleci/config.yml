@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Push to Heroku
           command: |
-            git push heroku $HEROKU_APP_NAME:master
+            git push heroku $HEROKU_APP_NAME:main
 
 workflows:
   version: 2
