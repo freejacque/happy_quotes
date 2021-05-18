@@ -12,3 +12,29 @@ jobs:
       - run:
           name: Run tests
           command: npm test
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/happy_quotes
+    environment:
+      HEROKU_APP: HEROKU_APP_NAME
+    steps:
+      - checkout
+      - run:
+          name: Setup Heroku
+          command: bash .circle/setup-heroku.sh
+
+      - run:
+          command: |
+          git push heroku happy-quotes:main
+          sleep 5
+          heroku restart
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
