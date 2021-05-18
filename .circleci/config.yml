@@ -1,0 +1,12 @@
+version: 2.0
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:16.0.0
+    steps:
+      - checkout
+      - run: node --version
+      - node/install-packages
+      - run:
+          name: Run tests
+          command: jest

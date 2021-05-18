@@ -1,6 +1,18 @@
 {
+  "name": "happy-quotes",
+  "description": "Click a button to get a quote about happiness",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "jest-cli": "^26.6.3"
+  },
+  "engines": {
+    "node": ">=16.0.0.0",
+    "npm": ">=7.10.0"
   }
 }
