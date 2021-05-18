@@ -6,7 +6,9 @@ jobs:
     steps:
       - checkout
       - run: node --version
-      - node/install-packages
+      - run:
+          name: install packages
+          command: npm install
       - run:
           name: Run tests
           command: jest
