@@ -15,8 +15,8 @@ jobs:
   deploy:
     machine:
       enabled: true
-    working_directory: ~/happy-quotes
-    environment: HEROKU_APP_NAME
+    working_directory: ~/happy_quotes
+    environment: $HEROKU_APP_NAME
     steps:
       - checkout
       - run:
